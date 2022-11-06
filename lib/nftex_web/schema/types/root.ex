@@ -14,6 +14,10 @@ defmodule NftexWeb.Schema.Types.Root do
 
       resolve &ArtResolver.get/2
     end
+
+    field :arts, list_of :art do
+      resolve &ArtResolver.all/2
+    end
   end
 
   object :root_mutation do
