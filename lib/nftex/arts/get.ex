@@ -3,7 +3,7 @@ defmodule Nftex.Arts.Get do
   alias Nftex.Art
 
   def call(id) do
-    art = Repo.get!(id)
+    art = Repo.get!(Art, id)
 
     {:ok, art}
   rescue

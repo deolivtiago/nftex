@@ -8,11 +8,11 @@ defmodule NftexWeb.Schema.Types.Custom.UUID4 do
   alias Ecto.UUID
 
   scalar :uuid4, name: "UUID4" do
-    description("""
+    description """
     The `UUID4` scalar type represents UUID4 compliant string data, represented as UTF-8
     character sequences. The UUID4 type is most often used to represent unique
     human-readable ID strings.
-    """)
+    """
 
     serialize(&encode/1)
     parse(&decode/1)

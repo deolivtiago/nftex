@@ -3,7 +3,7 @@ defmodule Nftex.Arts.Create do
   alias Nftex.Art
 
   def call(attrs) do
-    %__MODULE__{}
+    %Art{}
     |> Art.changeset(attrs)
     |> Repo.insert()
   end
