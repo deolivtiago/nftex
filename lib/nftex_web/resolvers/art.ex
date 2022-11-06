@@ -1,5 +1,6 @@
 defmodule NftexWeb.Resolvers.Art do
   alias Nftex.Arts
 
-  def get(%{id: art_id}, _), do: Arts.get(art_id)
+  def create(%{input: attrs}, _), do: Arts.create(attrs)
+  def get(%{id: id}, _), do: Arts.get(id)
 end
